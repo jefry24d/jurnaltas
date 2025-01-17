@@ -46,7 +46,6 @@ async function submitForm(event) {
         }
     } catch (error) {
         console.error("Error:", error);
-        alert("Tidak dapat menyimpan data. Periksa koneksi internet Anda.");
     }
 }
 
