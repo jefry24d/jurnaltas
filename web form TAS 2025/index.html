@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Kegiatan Tenaga Administrasi</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+        body {
+            font-family: 'League Spartan', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Form Kegiatan Tenaga Administrasi</h1>
+        <h2>SMA KEMALA BHAYANGKARI 1 SURABAYA</h2>
+    </header>
+    
+    <form id="kegiatan-form" onsubmit="submitForm(event)">
+        <label for="nama">Nama:</label><br>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="tanggal">Tanggal:</label><br>
+        <input type="date" id="tanggal" name="tanggal" required><br><br>
+
+        <label for="kegiatan">Kegiatan:</label><br>
+        <div class="editor-container">
+
+            <div class="toolbar">
+                <button type="button" onclick="document.execCommand('bold')"><b>B</b></button>
+                <button type="button" onclick="document.execCommand('italic')"><i>I</i></button>
+                <button type="button" onclick="document.execCommand('underline')"><u>U</u></u></button>
+            </div>
+
+            <div id="editor" contenteditable="true" class="editor" name="kegiatan"></div>
+        </div><br><br>
+
+        <input type="hidden" id="kegiatan" name="kegiatan">
+
+        <button type="submit">Simpan</button>
+        <button type="button" id="save-draft-button" onclick="saveDraft()">Simpan Sementara</button>
+    </form>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

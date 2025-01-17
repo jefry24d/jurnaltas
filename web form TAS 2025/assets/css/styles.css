@@ -1,0 +1,185 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background dan font utama */
+body {
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.dropbox.com/scl/fi/cvaq3cg47iyplhhyalc8i/njirrrrr.png?rlkey=mrpp6f1s0h4fsu166e4u6ej1a&st=qbwm5q27&dl=1') no-repeat center center fixed;
+    background-size: 50%;  /* Gambar lebih kecil */
+    opacity: 0.2;  /* Transparansi 50% pada gambar */
+    z-index: -1;  /* Membuat gambar berada di belakang konten */
+}
+
+.editor-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+.toolbar {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.toolbar button {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #2b6290;
+    transition: background-color 0.3s ease;
+}
+
+.toolbar button:hover {
+    background-color: #4a90e2;
+    color: white;
+}
+
+#editor {
+    width: 100%;
+    min-height: 200px;
+    padding: 2px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: white;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Membuat container untuk judul dan gambar */
+.header-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column; /* Menata h1 dan h2 secara vertikal */
+    align-items: flex-start; /* Menjaga h1 dan h2 tetap di kiri */
+    text-align: center;
+}
+
+/* Styling untuk h1 dan h2 */
+h1 {
+    font-size: 2rem;
+    color: #2b6290;
+    margin-bottom: 10px;  /* Memberikan jarak antara h1 dan h2 */
+    margin-right: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ff914d;
+    margin-right: 20px;
+}
+
+/* Styling form */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 500px;
+    position: relative;  /* Memastikan form tetap di atas gambar */
+    z-index: 3;
+}
+
+/* Styling label dan input */
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    height: 200px; /* Lebih besar daripada ukuran default */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Button styling */
+button {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #357ab7;
+}
+
+button:active {
+    background-color: #2b6290;
+}
+
+/* Add subtle animation on input focus */
+input, textarea {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Styling for responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
